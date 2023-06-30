@@ -11,21 +11,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_06_26_191348) do
-  create_table "borrowers", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "invoices", force: :cascade do |t|
     t.string "invoice_number"
     t.decimal "amount", precision: 10, scale: 2
     t.date "due_date"
-    t.integer "borrower_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["borrower_id"], name: "index_invoices_on_borrower_id"
   end
 
-  add_foreign_key "invoices", "borrowers"
 end

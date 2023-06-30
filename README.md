@@ -11,7 +11,7 @@ We've organized the code into two apps:
 
 ## Frontend
 The frontend folder contains a vite app with react and vitest pre configured. 
-We have also include MaterialUI, but feel free to use any other framework, libraries, or tooling that you prefer.
+We have included MaterialUI to speed development, but feel free to use any other framework, libraries, or tooling that you prefer.
 
 The app will list several invoices by default, edit or improve the code as needed for your solution.
 Any other views or interactions will need to be added by you.
@@ -34,7 +34,8 @@ Tested Node versions:
     ```
 
 ### Testing
-We've added simple tests for the existing code. You should test any new code you create.
+Tests are written vitest and react-testing-library, but feel free to install jest or any other framework you prefer.
+You should test any new code you create.
 
 Run all tests:
 ```sh
@@ -70,7 +71,8 @@ bundle exec rails s
 ```
 
 ### Testing
-You should test any new code you create, and avoid breaking any existing tests.
+Tests are written using mintest, but you can install Rspec or any other libraries you prefer.
+You should test any new code you create.
 
 Run all tests:
 ```sh

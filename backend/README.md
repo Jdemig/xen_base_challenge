@@ -10,7 +10,7 @@ The API application runs in a docker container. Install docker before following 
 ## Getting Started
 
 1. First build the docker container by running:
-    ``sh
+    ```sh
     docker compose build
     ```
 2. Next, start the container:
@@ -23,6 +23,7 @@ If you'd like to change this, simply edit the `docker-compose.yml` to expose a d
 E.g. to change the API webservice to port 5555 on your machine:
 
 From:
+
     ```yaml
     ...
           dockerfile: Dockerfile
@@ -32,6 +33,7 @@ From:
     ```
 
 To:
+
     ```yaml
     ...
           dockerfile: Dockerfile

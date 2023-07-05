@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_175105) do
     t.date "due_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "invoice", default: "created", null: false
+    t.string "state", default: "created", null: false
   end
 
 end

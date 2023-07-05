@@ -9,7 +9,12 @@ We've organized the code into two apps:
 1. A Backend API built with Ruby on Rails
 2. A Frontend App built with ReactJS
 
-## Frontend
+## 1. Backend
+The backend folder contains a Ruby on Rails service you can query with your frontend app.
+
+Instructions for running the service are in the [README.md](./backend/README.md)
+
+## 2. Frontend
 The frontend folder contains a vite app with react and vitest pre configured. 
 We have included MaterialUI to speed development, but feel free to use any other framework, libraries, or tooling that you prefer.
 
@@ -41,8 +46,3 @@ Run all tests:
 ```sh
 npm run test
 ```
-
-## Backend
-The backend folder contains a Ruby on Rails service you can query with your frontend app.
-
-Instructions for running the service are in the [README.md](./backend/README.md)

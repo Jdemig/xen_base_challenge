@@ -24,23 +24,19 @@ E.g. to change the API webservice to port 5555 on your machine:
 
 From:
 
-    ```yaml
     ...
           dockerfile: Dockerfile
         ports:
           - "3000:3000"
     ...
-    ```
 
 To:
 
-    ```yaml
     ...
           dockerfile: Dockerfile
         ports:
           - "3000:5555"
     ...
-    ```
 
 ...then simply re-run step 2 above to start the service on the new port
 

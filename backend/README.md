@@ -21,29 +21,36 @@ The API application runs in a docker container. Install docker before following 
 The container will run on port 3000 of your machine by default.
 If you'd like to change this, simply edit the `docker-compose.yml` to expose a different port.
 E.g. to change the API webservice to port 5555 on your machine:
+
 From:
-```yaml
-...
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-...
-```
+    ```yaml
+    ...
+          dockerfile: Dockerfile
+        ports:
+          - "3000:3000"
+    ...
+    ```
+
 To:
-```yaml
-...
-      dockerfile: Dockerfile
-    ports:
-      - "3000:5555"
-...
-```
-... followed by re-running step 2 above should do the trick
+    ```yaml
+    ...
+          dockerfile: Dockerfile
+        ports:
+          - "3000:5555"
+    ...
+    ```
+
+...then simply re-run step 2 above to start the service on the new port
+
 
 ## Usage
-The container has several available endpoints for you to query:
+The container has several available endpoints for you to query related to invoices.
 
+### Endpoints
 - List invoices:
+
     GET http://localhost:3000/invoices
+
     Example Output:
     ```json
         [
@@ -73,7 +80,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Get an invoice:
+
     GET http://localhost:3000/invoices/7
+
     Example Response:
     ```json
     {
@@ -88,7 +97,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Create an invoice:
+
     PUT http://localhost:3000/invoices
+
     BODY:
     ```json
     {
@@ -100,6 +111,7 @@ The container has several available endpoints for you to query:
         "state": "created"
     }
     ```
+
     Response:
     ```json
     {
@@ -114,7 +126,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Update an invoice:
+
     PUT http://localhost:3000/invoices/13
+
     BODY:
     ```json
     {
@@ -123,6 +137,7 @@ The container has several available endpoints for you to query:
         }
     }
     ```
+
     Response:
     ```json
     {
@@ -140,7 +155,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Pay an invoice:
+
     POST http://localhost:3000/invoices/13/pay
+
     Response:
     ```json
     {
@@ -158,7 +175,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Ship an invoice:
+
     POST http://localhost:3000/invoices/13/ship
+
     Response:
     ```json
     {
@@ -176,7 +195,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Complete an invoice:
+
     POST http://localhost:3000/invoices/13/ship
+
     Response:
     ```json
     {
@@ -194,7 +215,9 @@ The container has several available endpoints for you to query:
     ```
 
 - Void an invoice:
+
     POST http://localhost:3000/invoices/13/void
+
     Response:
     ```json
     {

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  before_action :random_errors
+  # before_action :random_errors
 
   def random_errors
     if rand(1..10) == 1

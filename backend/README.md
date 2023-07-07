@@ -19,7 +19,7 @@ The API application runs in a docker container. Install docker before following 
     ```
 
 The container will run on port 3000 of your machine by default.
-If you'd like to change this, simply edit the `docker-compose.yml` to expose a different port.
+If you'd like to change this, simply edit the [docker-compose.yml](./docker-compose.yml) to expose a different port.
 E.g. to change the API webservice to port 5555 on your machine:
 
 From:
@@ -38,7 +38,7 @@ To:
           - "3000:5555"
     ...
 
-...then simply re-run step 2 above to start the service on the new port
+Then simply re-run step 2 above to start the service on the new port
 
 
 ## Usage

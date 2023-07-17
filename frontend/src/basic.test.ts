@@ -1,21 +1,12 @@
-import { assert, expect, test } from 'vitest'
+import {expect, test} from 'vitest'
+import rootStore from "./stores";
 
-// Edit an assertion and save to see HMR in action
+const { globalStore } = rootStore;
 
-test('Math.sqrt()', () => {
-  expect(Math.sqrt(4)).toBe(2)
-  expect(Math.sqrt(144)).toBe(12)
-  expect(Math.sqrt(2)).toBe(Math.SQRT2)
-})
+test('setAlert should set the alert', () => {
+  globalStore.setAlert({ status: 'info', message: 'Hello World' });
 
-test('JSON', () => {
-  const input = {
-    foo: 'hello',
-    bar: 'world',
-  }
+  const alert = globalStore.getAlert();
 
-  const output = JSON.stringify(input)
-
-  expect(output).eq('{"foo":"hello","bar":"world"}')
-  assert.deepEqual(JSON.parse(output), input, 'matches original')
-})
+  expect(alert).toEqual({ status: 'info', message: 'Hello World' });
+});

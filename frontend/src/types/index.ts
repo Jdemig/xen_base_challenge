@@ -1,2 +1,2 @@
-import { Invoice } from './Invoice.type'
+import {Invoice} from './Invoice.type'
 export type { Invoice }

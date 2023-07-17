@@ -1,17 +1,16 @@
-import { Container } from '@mui/material'
+import {RootStoreProvider} from "./stores/react";
+import {CssBaseline} from "@mui/material";
+import Layout from "./components/Layout";
 
-import './App.css'
-
-import InvoiceList from './views/InvoiceList'
 
 function App() {
   return (
-    <>
-      <Container>
-        <InvoiceList />
-      </Container>
-    </>
+    <RootStoreProvider>
+      <CssBaseline />
+      <Layout />
+    </RootStoreProvider>
   )
 }
+
 
 export default App
